@@ -60,7 +60,7 @@ ___
 
 #### Flashing ntrboot (3DS Multi System)
 
-This method requires temporary access to a second 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax).
+This method requires temporary access to a second 3DS family device that is already running boot9strap.
 
 Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
