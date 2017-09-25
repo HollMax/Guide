@@ -2,6 +2,8 @@
 title: "Homebrew Launcher (Soundhax)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 The Homebrew Launcher has many different entrypoints, or methods of launching.
 
 Soundhax is compatible with versions 9.0.0 through 11.3.0 in the EUR, JPN, KOR, and USA regions.
@@ -17,7 +19,7 @@ This means that using a Cart Update from a version containing an older Nintendo 
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
-#### What you need
+### What you need
 
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
@@ -28,7 +30,7 @@ This means that using a Cart Update from a version containing an older Nintendo 
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
 * The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
 
-#### Instructions
+### Instructions
 
 1. Power off your device
 1. Insert your SD card into your computer
@@ -69,5 +71,5 @@ This means that using a Cart Update from a version containing an older Nintendo 
 
 ___
 
-Continue to [Installing boot9strap (Homebrew Launcher)](installing-boot9strap-(homebrew-launcher))
+### Continue to [Installing boot9strap (Homebrew Launcher)](installing-boot9strap-(homebrew-launcher))
 {: .notice--primary}

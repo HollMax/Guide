@@ -2,13 +2,15 @@
 title: "Homebrew Launcher (Alternatives)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 The Homebrew Launcher has many different entrypoints, or methods of launching.
 
 If browserhax is not an option (see the chart below), you do not already own any of these games, and do not have another 3DS that can access the Homebrew Launcher, the cheapest option is to buy a "Nintendo Selects" copy of [Ocarina of Time 3D](https://amzn.to/2fkaKdp) (ensure you get the correct cartridge for your region) and a [Powersaves](https://amzn.to/2fb3VY7) (compatible with all regions), then use oot3dhax from the chart below.
 
 Ensure your device's Wireless Communication is turned on as udsploit (used in the next page) will need the wireless module to be active to function, and some devices (New 3DS, New 2DS, and Old 2DS) cannot adjust the Wireless Communication setting from the Homebrew Launcher. Wireless Communication only has to be on; connecting it to an access point is not required.
 
-#### What you need
+### What you need
 
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
@@ -17,7 +19,7 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
 * The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
 
-#### Instructions
+### Instructions
 
 1. Power off your device
 1. Insert your SD card into your computer
@@ -70,5 +72,5 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
     ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
     {: .notice--info}
 
-Continue to [Installing boot9strap (Homebrew Launcher)](installing-boot9strap-(homebrew-launcher))
+### Continue to [Installing boot9strap (Homebrew Launcher)](installing-boot9strap-(homebrew-launcher))
 {: .notice--primary}

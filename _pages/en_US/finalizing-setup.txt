@@ -2,6 +2,8 @@
 title: "Finalizing Setup"
 ---
 
+{% include toc title="Table of Contents" %}
+
 #### Overview of steps
 
 The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
@@ -16,7 +18,7 @@ During this process, we also setup programs such as the following:
 +  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
 +  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
 
-#### What you need
+### What you need
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
@@ -27,9 +29,9 @@ During this process, we also setup programs such as the following:
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
-#### Instructions
+### Instructions
 
-##### Section I - Prep Work
+#### Section I - Prep Work
 
 1. Power off your device
 1. Insert your SD card into your computer
@@ -57,7 +59,7 @@ During this process, we also setup programs such as the following:
 1. Reinsert your SD card into your device
 1. Power on your device
 
-##### Section II - Updating the System
+#### Section II - Updating the System
 
 If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
 {: .notice--danger}
@@ -70,7 +72,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + If this gives you an error, set your DNS settings to "auto"
   + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
 
-##### Section III - Launching FBI
+#### Section III - Launching FBI
 
 1. Launch the Download Play application
 1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
@@ -84,19 +86,19 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Your device should load the Homebrew Launcher
 1. Launch FBI from the list of homebrew
 
-##### Section IV - Installing CIAs
+#### Section IV - Installing CIAs
 
 1. Navigate to `SD` -> `cias`
 1. Select "\<current directory>"
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Press (Home), then close Download Play
 
-##### Section V - DSP Dump
+#### Section V - DSP Dump
 
 1. Launch the DSP1 application
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
-##### Section VI - CTRNAND Luma3DS
+#### Section VI - CTRNAND Luma3DS
 
 1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
@@ -110,7 +112,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (A) to continue
 1. Press (A) to relock write permissions
 
-##### Section VII - Backup SysNAND
+#### Section VII - Backup SysNAND
 
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
@@ -126,7 +128,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
 
-##### Section VIII - Cleanup SD Card
+#### Section VIII - Cleanup SD Card
 
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."

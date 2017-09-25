@@ -77,5 +77,5 @@ For a list of each of the calculated sighax signatures (the platform boot9strap 
 
 ___
 
-Continue to [Get Started](get-started)
+### Continue to [Get Started](get-started)
 {: .notice--primary}
