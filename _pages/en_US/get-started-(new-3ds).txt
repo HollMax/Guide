@@ -16,7 +16,7 @@ For all versions you can also [Cart Update](cart-update) (or use a standard syst
 
 Your device version can be found at the bottom right of the top screen of the System Settings.
 
-![]({{ base_path }}/images/screenshots/system-version.png)
+![]({{ "/images/screenshots/system-version.png" | absolute_url }})
 {: .notice--info}
 
 ### Version Table
