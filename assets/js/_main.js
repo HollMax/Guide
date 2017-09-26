@@ -69,4 +69,36 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  if((window.location.href.indexOf("/he_IL/") > -1) || (window.location.href.indexOf("/ar_SA/") > -1)) {
+    $("body").css("direction", "rtl");
+
+    $("nav.greedy-nav .nav-selector").css("left", "2.5rem");
+    $("nav.greedy-nav .lang-selector").css("left", ".2rem");
+    
+    $("nav.greedy-nav .links-menu").css("right", "auto");
+    $("nav.greedy-nav .lang-menu").css("right", "auto");
+
+    $("nav.greedy-nav .links-menu").css("left", "2.5rem");
+    $("nav.greedy-nav .lang-menu").css("left", ".2rem");
+
+    $("nav.greedy-nav .visible-links").css("padding-right", "0");
+    $("nav.greedy-nav .visible-links").css("padding-left", "2rem");
+
+    $("nav.greedy-nav .visible-links li:first-child a").css("margin-right", "0");
+    $("nav.greedy-nav .visible-links li:first-child a").css("margin-left", "1rem");
+
+    $("nav.greedy-nav .visible-links li:first-child").css("padding-right", "0");
+    $("nav.greedy-nav .visible-links li:first-child").css("padding-left", "2em");
+
+    $("nav.greedy-nav .visible-links li:last-child a").css("margin-right", "1rem");
+    $("nav.greedy-nav .visible-links li:last-child a").css("margin-left", "0");
+
+    // for some reason js cannot directly modify :before and :after pseudo-element's css
+    $('.greedy-nav').prepend('<style>.hidden-links:before{right:inherit !important;}</style>');
+    $('.greedy-nav').prepend('<style>.hidden-links:before{left:5px !important;}</style>');
+
+    $('.greedy-nav').prepend('<style>.hidden-links:after{right:inherit !important;}</style>');
+    $('.greedy-nav').prepend('<style>.hidden-links:after{left:5px !important;}</style>');
+  }
+
 });
