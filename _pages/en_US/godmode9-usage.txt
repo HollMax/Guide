@@ -10,7 +10,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 
 GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-## <a name="update-gm9" /> Updating GodMode9
+## Updating GodMode9
 
 Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
 {: .notice--info}
@@ -27,7 +27,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Reinsert your SD card into your device
 
-## <a name="nand_backup" /> Creating a NAND Backup
+## Creating a NAND Backup
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Press (Home) to bring up the action menu
@@ -44,7 +44,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
 
-## <a name="nand_restore" /> Restoring a NAND Backup
+## Restoring a NAND Backup
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Hold (R) and press (B) at the same time to eject your SD card
@@ -61,7 +61,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Once it has completed, press (A) to continue
 1. Press (A) to relock write permissions if prompted
 
-## <a name="injectHS" /> Injecting any .CIA app into Health & Safety
+## Injecting any .CIA app into Health & Safety
 
 For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
 {: .notice--info}
@@ -77,7 +77,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. Press (A) to continue
 1. Press (A) to relock write permissions if prompted
 
-## <a name="restore_hs" /> Restoring Health & Safety after injecting a .CIA app
+## Restoring Health & Safety after injecting a .CIA app
 
 This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
 {: .notice--info}
@@ -89,7 +89,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Press (A) to relock write permissions if prompted
 
-## <a name="dump_cart" /> Dumping a Game Cartridge
+## Dumping a Game Cartridge
 
 #### Prep Work
 
@@ -108,7 +108,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
   + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
 1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
-## <a name="dump_title" /> Dumping a Title
+## Dumping a Title
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Hover over the drive applicable to the type of title you wish to dump:
@@ -120,11 +120,11 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Build CIA (standard)"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
-## <a name="convert_3ds" /> Converting a .3DS to .CIA
+## Converting a .3DS to .CIA
 
 {% capture notice %}
 + For organizational purposes, copy each `.3ds` file you wish to convert to the `/cias/` folder on your SD card
-  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dump_cart)
+  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dumping-a-game-cartridge)
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
@@ -134,7 +134,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 1. Press (A) on your `.3ds` file to select it, then select "NCSD image options...", then select "Build CIA from file"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
-## <a name="backup_gba" /> Backup GBA VC Saves
+## Backup GBA VC Saves
 
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
@@ -154,7 +154,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + Press (Start) to reboot your device
 
-## <a name="restore_gba" /> Restore GBA VC Saves
+## Restore GBA VC Saves
 
 To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
@@ -176,7 +176,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Launch the GBA VC game
   + Exit the GBA VC game
 
-## <a name="format_sd" /> Format an SD card
+## Format an SD card
 
 **Note that this will erase the contents of your SD card!**
 {: .notice--danger}
@@ -192,7 +192,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Optionally, you may input a custom name for the SD card
 1. When prompted, input the key combo given to confirm
 
-## <a name="crypt_cia" /> Encrypting / Decrypting a .CIA file
+## Encrypting / Decrypting a .CIA file
 
 #### Prep Work
 
@@ -209,7 +209,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
     + **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
 1. Your encrypted / decrypted `.cia` will be outputted to the desired location
 
-## <a name="rm_nnid" />Removing an NNID without formatting your device
+## Removing an NNID without formatting your device
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`

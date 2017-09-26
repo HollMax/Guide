@@ -93,12 +93,116 @@ $(document).ready(function(){
     $("nav.greedy-nav .visible-links li:last-child a").css("margin-right", "1rem");
     $("nav.greedy-nav .visible-links li:last-child a").css("margin-left", "0");
 
-    // for some reason js cannot directly modify :before and :after pseudo-element's css
-    $('.greedy-nav').prepend('<style>.hidden-links:before{right:inherit !important;}</style>');
-    $('.greedy-nav').prepend('<style>.hidden-links:before{left:5px !important;}</style>');
+    // for some reason js cannot directly modify :before and :after pseudo-elements' css
+    $('nav.greedy-nav').prepend('<style>.hidden-links:before{right:inherit !important;}</style>');
+    $('nav.greedy-nav').prepend('<style>.hidden-links:before{left:5px !important;}</style>');
 
-    $('.greedy-nav').prepend('<style>.hidden-links:after{right:inherit !important;}</style>');
-    $('.greedy-nav').prepend('<style>.hidden-links:after{left:5px !important;}</style>');
+    $('nav.greedy-nav').prepend('<style>.hidden-links:after{right:inherit !important;}</style>');
+    $('nav.greedy-nav').prepend('<style>.hidden-links:after{left:5px !important;}</style>');
   }
+
+  var sidebar_shown = true;
+  var sidebar_hidden_pages = ["a9lh-to-b9s", "credits", "donations", "f3-(linux)", "f3x-(mac)",  
+                              "faq", "file-extensions-(windows)", "get-started", "h2testw-(windows)", 
+                              "region-changing", "site-navigation", "uninstall-cfw", "updating-b9s", "why-ads"];
+  
+  for(var i = 0; i < sidebar_hidden_pages.length; i++){
+    if(window.location.href.indexOf(sidebar_hidden_pages[i]) > -1) {
+      sidebar_shown = false;
+    }
+  }
+
+  var devices = {
+    "get-started-(old-3ds)": "0",
+    "get-started-(new-3ds)": "1",
+  };
+
+  var methods = {
+    "installing-boot9strap-(2xrsa)": "0",
+    "installing-boot9strap-(mset)": "1",
+    "installing-boot9strap-(browser)": "2",
+    "homebrew-launcher-(soundhax)": "3",
+    "installing-boot9strap-(dsiware)": "4",
+    "ntr-and-cubic-ninja": "5",
+    "ntrboot": "6",
+    "installing-boot9strap-(hardmod)": "7",
+  };
+
+  for(var device in devices){
+    if(window.location.href.indexOf(device) > -1) {
+      localStorage.setItem('device', devices[device]);
+    }
+  }
+
+  for(var method in methods){
+    if(window.location.href.indexOf(method) > -1) {
+      localStorage.setItem('method', methods[method]);
+    }
+  }
+
+  var device, method;
+  if(!((device = localStorage.getItem('device')) && (method = localStorage.getItem('method')))){
+    sidebar_shown = false;
+  }
+
+  if(sidebar_shown){
+    var ol = $('.sidebar.sticky .nav__list .nav__items ol');
+
+    ol.append("<li><a href='/'>Home</a></li>");
+    
+    if(device == "0"){
+      ol.append("<li><a href='get-started-(old-3ds)'>Get Started (Old 3DS)</a></li>");
+      switch (method){
+        case "0":
+          ol.append("<li><a href='installing-boot9strap-(2xrsa)'>Installing boot9strap (2xrsa)</a></li>");
+          ol.append("<li><a href='finalizing-setup'>Finalizing Setup");
+          break;
+        case "1":
+          break;
+        case "2":
+          break;
+        case "3":
+          ol.append("<li><a href='installing-boot9strap-(homebrew-launcher)'>Installing boot9strap (Homebrew Launcher)</a></li>");
+          ol.append("<li><a href='finalizing-setup'>Finalizing Setup");
+          break;
+        case "4":
+          break;
+        case "5":
+          break;
+        case "6":
+          break;
+        case "7":
+          break;
+      }
+    } else if(device == "1") {
+      ol.append("<li><a href='get-started-(new-3ds)'>Get Started (New 3DS)</a></li>");
+      switch (method){
+        case "0":
+          ol.append("<li><a href='installing-boot9strap-(2xrsa)'>Installing boot9strap (2xrsa)</a></li>");
+          ol.append("<li><a href='godmode9-usage#restoring-a-nand-backup'>NAND Restore</a></li>");
+          ol.append("<li><a href='finalizing-setup'>Finalizing Setup");
+          break;
+        case "1":
+          break;
+        case "2":
+          break;
+        case "3":
+          ol.append("<li><a href='installing-boot9strap-(homebrew-launcher)'>Installing boot9strap (Homebrew Launcher)</a></li>");
+          ol.append("<li><a href='finalizing-setup'>Finalizing Setup");
+          break;
+        case "4":
+          break;
+        case "5":
+          break;
+        case "6":
+          break;
+        case "7":
+          break;
+      }
+    }
+
+    $('.sidebar.sticky').css("display", "inherit");
+  }
+  
 
 });
