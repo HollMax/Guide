@@ -300,6 +300,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
+  top: ($navicon-height / 2);
   background: $text-color;
   margin: auto;
 
