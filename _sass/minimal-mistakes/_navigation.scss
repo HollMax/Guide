@@ -213,7 +213,6 @@
       display: -webkit-box;
       display: flex;
       -webkit-box-pack: end;
-       justify-content: flex-end;
       -webkit-box-flex: 1;
                   flex: 1;
       padding-right: 2rem;
@@ -223,6 +222,11 @@
         -webkit-box-flex: 0;
                     flex: none;
 
+        &:first-child {
+          a {
+            margin-left: 0;
+          }
+        }
         &:last-child {
           a {
             margin-right: 0;
